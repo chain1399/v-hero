@@ -1,0 +1,27 @@
+{
+  "name": "v-hero",
+  "version": "0.0.2",
+  "description": "vue 3 hero animations directive",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "/dist/**/*.*"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc",
+    "pub": "npm version patch && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4",
+    "vite": "^3.0.2",
+    "@vitejs/plugin-vue": "^3.0.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.2"
+  }
+}
