@@ -20,7 +20,7 @@ const Hero: Plugin = (app: App, options: PluginOptions) => {
   }
 
 
-  //exit animation
+  //exit animation !
   // setTimeout(() => {
   //   const router = app.config.globalProperties.$router;
   //   if (router) {
