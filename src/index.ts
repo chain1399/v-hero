@@ -11,14 +11,15 @@ interface PluginOptions extends DefaultOptions {
 const Hero: Plugin = (app: App, options: PluginOptions) => {
   app.directive("hero", vHero);
 
-  const { enter: enterOptions, ...heroOptions } = options;
+  if (options) {
+    const { enter: enterOptions, ...heroOptions } = options;
 
-  setDefaultHeroOptions(heroOptions);
+    setDefaultHeroOptions(heroOptions);
 
-  if(enterOptions){
-    setDefaultEnterOptions(enterOptions);
+    if (enterOptions) {
+      setDefaultEnterOptions(enterOptions);
+    }
   }
-
 
   //exit animation !
   // setTimeout(() => {
