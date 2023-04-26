@@ -7,8 +7,6 @@ import "./app.css";
 const app = createApp(App);
 
 app.use(router);
-app.use(Hero, {
-	
-});
+app.use(Hero, {});
 
 app.mount("#app");
