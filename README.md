@@ -30,27 +30,34 @@ app.use(Hero);
 
 set v-hero id to be the same in every route, if v-hero detect the same id, it'll try to animate element when enter route.
 
-```js
+```html
 //page1.vue
 <div
-	class="hero"
-	v-hero="{
-		id: 'mango',
-	}"
+  v-hero="{
+    id: 'mango',
+  }"
+>
+  <img src="mango.jpg" alt="mango" />
+</div>
+
+//page2.vue
+<div
+  v-hero="{
+    id: 'mango',
+  }"	
 >
 	<img src="mango.jpg" alt="mango" />
 </div>
 
-
-//page2.vue
+//page3.vue
+//add more option
 <div
-	class="hero"
-	v-hero="{
-		id: 'mango',
-		easing: 'spring',
-		stiffness: 250,
-		damping: 20,
-	}"
+  v-hero="{
+    id: 'mango',
+    easing: 'spring',
+    stiffness: 250,
+    damping: 20,
+  }"	
 >
 	<img src="mango.jpg" alt="mango" />
 </div>
@@ -64,12 +71,47 @@ easing can be easing function and special 'spring' easing.
 Stiffness, damping and mass is only effect when easing is 'spring'.
 ```js
 v-hero="{
-	easing: "cubic-bezier(0.4,0,0.2,1)",
-	duration: 300,
-	stiffness: 250,
-	damping: 20,
-	mass: 1,
-	delay: 0,
+  id: 'id',
+  easing: 'cubic-bezier(0.4,0,0.2,1)',
+  duration: 300,
+  stiffness: 250,
+  damping: 20,
+  mass: 1,
+  delay: 0,
 }"
+```
 
+If you want to add enter animation use enter option.
+
+```js
+v-hero="{
+  enter: {
+    easing: 'cubic-bezier(0.4,0,0.2,1)',
+    duration: 300,
+    stiffness: 250,
+    damping: 20,
+    mass: 1,
+    delay: 0,
+  }
+}"
+```
+You can use both animation by id and enter animation 
+```js
+v-hero="{
+  id: 'id',
+  easing: 'cubic-bezier(0.4,0,0.2,1)',
+  duration: 300,
+  stiffness: 250,
+  damping: 20,
+  mass: 1,
+  delay: 0,
+  enter: {
+    easing: 'spring',
+    duration: 300,
+    stiffness: 250,
+    damping: 20,
+    mass: 1,
+    delay: 0,
+  }
+}"
 ```

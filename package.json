@@ -12,7 +12,7 @@
     "build": "vite build && tsc",
     "pub": "npm version patch && npm publish"
   },
-  "keywords": [],
+  "keywords": ["vue", "vue3", "hero", "animation", "directive"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -28,5 +28,5 @@
     "type": "git",
     "url": "https://github.com/chain1399/v-hero.git"
   },
-  "homepage": "https://github.com/chain1399/v-hero"
+  "homepage": "https://github.com/chain1399/v-hero",
 }
